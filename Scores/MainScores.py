@@ -1,9 +1,7 @@
 from flask import Flask
-
-import Utils
+import Utils.Utils
 
 app = Flask(__name__)
-
 @app.route("/")
 def score_server():
     try:

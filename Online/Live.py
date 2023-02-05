@@ -1,8 +1,7 @@
-import GuessGame
-import MemoryGame
-import CurrencyRolleteGame
-import Score
-
+from Games import GuessGame
+from Games import MemoryGame
+from Games import CurrencyRolleteGame
+from Scores import Score
 
 def welcome(name):
     return '''Hello {} and welcome to the World Of Games(WoG).

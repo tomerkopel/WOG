@@ -1,6 +1,4 @@
-import Utils
-
-
+from Utils import Utils
 def add_score(difficulty):
     score_file = open(Utils.SCORES_FILE_NAME, mode='r+')
     try:
