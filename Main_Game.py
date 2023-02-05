@@ -1,4 +1,4 @@
-from Online.Live import load_game, welcome
+from Live import load_game, welcome
 
 keep_playing = True
 name = input("What is your name: ")
