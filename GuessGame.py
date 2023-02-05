@@ -1,6 +1,5 @@
 import random
 
-
 def pars_to_number(num):
     try:
         input_number = int(num)

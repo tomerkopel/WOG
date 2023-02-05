@@ -2,7 +2,6 @@ import random
 import time
 import sys
 
-
 def pars_to_number(num):
     try:
         input_number = int(num)
