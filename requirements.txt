@@ -1,0 +1,2 @@
+Flask==2.2.2
+CurrencyConverter==0.17.5

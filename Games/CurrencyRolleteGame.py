@@ -1,4 +1,4 @@
-import requests
+from currency_converter import CurrencyConverter
 import random
 
 def pars_to_number(num):
@@ -11,13 +11,9 @@ def pars_to_number(num):
         print(f"General Error - {e.args}")
 
 def get_usd_to_ils():
-    url = 'https://api.freecurrencyapi.com/v1/latest?apikey=0SDTZq0Jq0lj9HHgK2Tpjd8tvKmaO35CbyPMCsXU&currencies=ILS'
-    response = requests.get(url)
-    data = response.json()
+    cr = CurrencyConverter()
 
-    usd_to_ils = data["data"]["ILS"]
-
-    return usd_to_ils
+    return cr.convert(1,'USD', 'ILS')
 
 
 def get_money_interval(difficulty, usd_to_ils_rate ,total_value_of_money):
@@ -40,7 +36,7 @@ def play(difficulty):
     usd_to_ils = get_usd_to_ils()
     money_interval = get_money_interval(difficulty, usd_to_ils, total_value_of_money)
     user_guess = get_guess_from_user(total_value_of_money)
-    if user_guess >= money_interval[0] and user_guess <= money_interval[1]:
+    if money_interval[0] <= user_guess <= money_interval[1]:
         return True
     else:
         return False

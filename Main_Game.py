@@ -5,4 +5,6 @@ name = input("What is your name: ")
 print(welcome(name))
 while keep_playing:
     load_game()
-    #keep_playing =
+    keep_playing = input("Do you want to play another game? (Y/N): ").lower() == 'y'
+
+print("Goodbye :)")
